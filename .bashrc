@@ -78,7 +78,7 @@ disp() {
 		;;
 	esac
 
-	echo "$(cut -d ' ' -f 1 <<< "$connected")"
+	cut -d ' ' -f 1 <<< "$connected"
 	~/.fehbg
 }
 
