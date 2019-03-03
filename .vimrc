@@ -4,6 +4,9 @@ let skip_defaults_vim=1
 " set leader key to spacebar
 let mapleader="\<Space>"
 
+" save and quit
+nnoremap <Leader><TAB> :wq<CR>
+
 " use tab to escape
 inoremap <TAB> <ESC>
 vnoremap <TAB> <ESC>
@@ -34,12 +37,16 @@ set fo-=t
 " show line numbers
 set number
 
-" show visual selection size
+" show commands as they're constructed
 set showcmd
 
 " highlight current line
 set cursorline
 highlight CursorLine cterm=NONE ctermbg=237
+
+" highlight all search matches
+set hlsearch
+nnoremap <Leader>n :noh<CR>
 
 " show cursor position
 set ruler
