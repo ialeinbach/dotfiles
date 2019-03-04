@@ -4,6 +4,9 @@ let skip_defaults_vim=1
 " set leader key to spacebar
 let mapleader="\<Space>"
 
+nnoremap <up> <C-u>
+nnoremap <down> <C-d>
+
 " save and quit
 nnoremap <Leader><TAB> :wq<CR>
 

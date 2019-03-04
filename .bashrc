@@ -33,15 +33,6 @@ alias nenv='python -m venv .env'
 
 ################################################################################
 
-get() {
-	if (( $# == 0 )); then
-		echo "got"
-		return
-	fi
-
-	mv "$1" .
-}
-
 gitget() {
 	local owner='ialeinbach'
 	local repo=''
