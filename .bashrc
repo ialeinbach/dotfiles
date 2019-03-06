@@ -9,6 +9,13 @@ fi
 
 ################################################################################
 
+export GOPATH=$HOME/Go
+export PATH=$PATH:$GOPATH/bin
+
+compton-trans -c 90
+
+################################################################################
+
 if hash exa 2> /dev/null; then
 	alias ls='exa'
 	alias ll='exa -l'
@@ -29,15 +36,24 @@ alias mote='ssh ialeinbach@mote.cs.vassar.edu'
 alias me='ssh ian.leinbach@ian.leinbach.me'
 
 alias ghci='stack ghci'
-alias nenv='python -m venv .env'
+alias nenv='python3 -m venv .env'
 
 ################################################################################
+
+get() {
+	if (( $# == 0 )); then
+		echo "got"
+		return
+	fi
+
+	cp "$1" .
+}
 
 gitget() {
 	local owner='ialeinbach'
 	local repo=''
 
-	if [ $# -eq 0 ]; then
+	if (( $# == 0 )); then
 		echo "Please enter at least a repo name!"
 		return
 	fi

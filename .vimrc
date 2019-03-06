@@ -4,11 +4,11 @@ let skip_defaults_vim=1
 " set leader key to spacebar
 let mapleader="\<Space>"
 
-nnoremap <up> <C-u>
-nnoremap <down> <C-d>
+nnoremap <up> <C-y>
+nnoremap <down> <C-e>
 
 " save and quit
-nnoremap <Leader><TAB> :wq<CR>
+nnoremap <Leader><ESC> :wq<CR>
 
 " use tab to escape
 inoremap <TAB> <ESC>
@@ -37,8 +37,8 @@ set textwidth=80
 " prevent automatic wrapping
 set fo-=t
 
-" show line numbers
-set number
+" show hybrid line numbers
+set relativenumber number
 
 " show commands as they're constructed
 set showcmd
