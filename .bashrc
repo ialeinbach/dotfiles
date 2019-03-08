@@ -12,6 +12,8 @@ fi
 export GOPATH=$HOME/Go
 export PATH=$PATH:$GOPATH/bin
 
+alias opaque='compton-trans -c 100'
+alias trans='compton-trans -c 90'
 compton-trans -c 90
 
 ################################################################################
