@@ -12,9 +12,14 @@ fi
 export GOPATH=$HOME/Go
 export PATH=$PATH:$GOPATH/bin
 
+################################################################################
+
 alias opaque='compton-trans -c 100'
 alias trans='compton-trans -c 90'
-compton-trans -c 90
+
+if hash compton-trans 2> /dev/null && [[ -n "$DISPLAY" ]]; then
+	compton-trans -c 90
+fi
 
 ################################################################################
 
@@ -28,11 +33,13 @@ else
 	alias la='ls -la --color=auto'
 fi
 
-alias doc='firefox --new-tab docs.new'
+if [[ -x "~/.lock" ]]; then
+	alias lock='~/.lock'
+fi
+
 alias open='xdg-open'
 alias paste='xclip -sel clip -o'
 alias copy='xclip -sel clip -i'
-alias lock='~/.lock'
 
 alias mote='ssh ialeinbach@mote.cs.vassar.edu'
 alias me='ssh ian.leinbach@ian.leinbach.me'
@@ -73,7 +80,7 @@ venv() {
 	local pre="$1"
 
 	# ensure slash between $pre and $env
-	if [ $# -ne 0 ] && [ "${pre:(-1)}" != "/" ]; then
+	if (( $# != 0 )) && [[ "${pre:(-1)}" != "/" ]]; then
 		pre+="/"
 	fi
 
