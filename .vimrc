@@ -7,9 +7,6 @@ let mapleader="\<Space>"
 nnoremap <up> <C-y>
 nnoremap <down> <C-e>
 
-" save and quit
-nnoremap <Leader><ESC> :wq<CR>
-
 " use tab to escape
 inoremap <TAB> <ESC>
 vnoremap <TAB> <ESC>
