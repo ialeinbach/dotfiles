@@ -7,6 +7,9 @@ let mapleader="\<Space>"
 nnoremap <up> <C-y>
 nnoremap <down> <C-e>
 
+" save and quit
+nnoremap <Leader><ESC> :wq<CR>
+
 " use tab to escape
 inoremap <TAB> <ESC>
 vnoremap <TAB> <ESC>
@@ -14,6 +17,10 @@ vnoremap <TAB> <ESC>
 " move current line up & down
 nnoremap <C-j> :m+<CR>
 nnoremap <C-k> :m-2<CR>
+
+" clipboard support via xclip
+vnoremap <Leader>c :w !xclip<CR><CR>
+nnoremap <Leader>v :r !xclip -o<CR>
 
 " expand selection by paragraph
 vnoremap <S-j> }
