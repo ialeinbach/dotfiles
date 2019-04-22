@@ -6,6 +6,8 @@ let mapleader="\<Space>"
 
 nnoremap <up> <C-y>
 nnoremap <down> <C-e>
+nnoremap <left> :prev<CR>
+nnoremap <right> :next<CR>
 
 " save and quit
 nnoremap <Leader><ESC> :wq<CR>
