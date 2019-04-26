@@ -9,9 +9,6 @@ nnoremap <down> <C-e>
 nnoremap <left> :prev<CR>
 nnoremap <right> :next<CR>
 
-" save and quit
-nnoremap <Leader><ESC> :wq<CR>
-
 " use tab to escape
 inoremap <TAB> <ESC>
 vnoremap <TAB> <ESC>
